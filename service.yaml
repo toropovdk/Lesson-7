@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus-svc
+spec:
+  ports:
+  - port: 9091
+    targetPort: 9090
+  selector:
+    app: prometheus-app
+  type: ClusterIP
